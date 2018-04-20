@@ -86,7 +86,8 @@
                                     <center>
                                         <img src="img/user1_bn.jpg" class="photo-user" alt="foto usuario">
                                     </center>
-                                    <input type="file" name="imagen[uno]" accept="image/*" class="estilo-file" />
+                                    <!-- <input type="file" name="imagen[uno]" accept="image/*" class="estilo-file" /> -->
+                                    <input type="file" id="img_perfil_profesor_1" name="imagen[uno]" accept="image/*" class="estilo-file">
                                     <center>
                                         <p class="fa fa-plus-circle boton-file"></p>
                                     </center>
@@ -105,9 +106,9 @@
                                     <center>
                                         <img src="img/user2_bn.jpg" class="photo-user" alt="foto usuario">
                                     </center>
-                                    <input type="file" name="imagen[dos]" accept="image/*" class="estilo-file" />
+                                    <input id="img_perfil_profesor_2" type="file" name="imagen[dos]" accept="image/*" class="estilo-file" />
                                     <center>
-                                        <p class="fa fa-plus-circle boton-file" id="img_perfil_profesor_2"></p>
+                                        <p class="fa fa-plus-circle boton-file"></p>
                                     </center>
                                 </div>
                             </div>
@@ -117,9 +118,7 @@
                             <div class="form-group">
                                 <input type="text" class="form-control" placeholder="Apodo" name="texto[apodo]" id="">
                             </div>
-                            <div class="form-group">
-                                <input id="img_perfil_profesor_1" type="file">
-                            </div>
+
                         </div>
                         <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
                             <div class="form-group">
@@ -127,7 +126,7 @@
                                     <center>
                                         <img src="img/user3_bn.jpg" class="photo-user" alt="foto usuario">
                                     </center>
-                                    <input type="file" name="imagen[tres]" accept="image/*" class="estilo-file" />
+                                    <input type="file" id="img_perfil_profesor_3" name="imagen[tres]" accept="image/*" class="estilo-file" />
                                     <center>
                                         <p class="fa fa-plus-circle boton-file"></p>
                                     </center>
@@ -156,7 +155,7 @@
                                 <center>
                                     <img src="img/user4_bn.jpg" class="photo-user" alt="foto usuario">
                                 </center>
-                                <input type="file" name="imagen[cuatro]" accept="image/*" class="estilo-file" />
+                                <input type="file" id="img_perfil_alumno_1" name="imagen[cuatro]" accept="image/*" class="estilo-file" />
                                 <center>
                                     <p class="fa fa-plus-circle boton-file"></p>
                                 </center>
@@ -175,7 +174,7 @@
                                 <center>
                                     <img src="img/user5_bn.jpg" class="photo-user" alt="foto usuario">
                                 </center>
-                                <input type="file" name="imagen[cinco]" accept="image/*" class="estilo-file" />
+                                <input type="file" id="img_perfil_alumno_2" name="imagen[cinco]" accept="image/*" class="estilo-file" />
                                 <center>
                                     <p class="fa fa-plus-circle boton-file"></p>
                                 </center>
@@ -194,7 +193,7 @@
                                 <center>
                                     <img src="img/user6_bn.jpg" class="photo-user" alt="foto usuario">
                                 </center>
-                                <input type="file" name="imagen[seis]" accept="image/*" class="estilo-file" />
+                                <input type="file" id="img_perfil_alumno_3" name="imagen[seis]" accept="image/*" class="estilo-file" />
                                 <center>
                                     <p class="fa fa-plus-circle boton-file"></p>
                                 </center>
@@ -374,6 +373,8 @@
             left: 0;
             right: 0;
             z-index: 1;
+            top: 4px;
+            left: 33px;
         }
         
         .estilo-file::before {
@@ -438,15 +439,15 @@
         
         .file-preview {
             position: absolute;
-            z-index: 1;
-            top: 2px;
-            left: 113px;
+            top: -1px;
+            left: 146px;
             right: -79px;
+            margin-bottom: 42px !important;
         }
         
         .file-preview img {
-            width: 50% !important;
-            height: 222px !important;
+            width: 128px !important;
+            height: 146px !important;
             border: 2px solid #444;
             transition: 200ms;
             margin-bottom: 20px;
@@ -455,29 +456,41 @@
         .file-caption-info,
         .file-size-info,
         .file-thumbnail-footer,
-        .hidden-xs {
+        .close,
+        .fileinput-remove .hidden-xs {
             display: none;
         }
         
         .file-caption,
         .kv-fileinput-caption,
         .icon-visible,
+        .hidden-xs,
         .glyphicon,
         .glyphicon-folder-open {
             display: none !important;
+        }
+        
+        .file-caption-main {
+            position: absolute !important;
+            display: table !important;
+            border-collapse: separate !important;
+            top: 108px !important;
+            z-index: 0 !important;
+            left: 102px !important;
         }
         
         .file-caption .form-control,
         .kv-fileinput-caption,
         .input-group-btn,
         .btn {
-            --background-color: #fff;
+            /* display: none; */
+            --background-color: #fff0;
             color: #000 !important;
             background-color: var(--background-color) !important;
-            border-color: #fff !important;
-            background-image: -webkit-linear-gradient(top, #fff 0, #fff 100%) !important;
+            border-color: #fff0 !important;
+            background-image: -webkit-linear-gradient(top, #06060600 0, #fff0 100%) !important;
             top: -3px;
-            left: 35px;
+            left: 50px;
             /* background-image: linear-gradient(to bottom, #337ab7 0, #265a88 100%) !important; */
             /* background-image: -webkit-gradient(linear, left top, left bottom, from(#337ab7), to(#265a88)) !important; */
         }
@@ -541,7 +554,13 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+    <!-- the main fileinput plugin file -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-fileinput/4.4.5/js/fileinput.min.js"></script>
+    <!-- optionally uncomment line below for loading your theme assets for a theme like Font Awesome (`fa`) -->
+    <!-- script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-fileinput/4.4.5/themes/fa/theme.min.js"></script -->
 
+    <!-- ESTILOS INPUTS -->
+    <script src="js/inputs.js"></script>
 </body>
 
 </html>
