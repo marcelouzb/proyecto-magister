@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Paso 1 - Rellenar información básica de la Orla</title>
+	<title>Paso 4 - Vista previa y registro</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width; initial-scale=1.0"> 
 	<!-- Latest compiled and minified CSS -->
@@ -12,7 +12,7 @@
 <body>
 	<div class="box-header">
 		<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
-			<div class="button-box1">
+			<div class="button-box">
 				<div class="number-box">
 					<h3 class="number-text"><span>1</span></h3>
 				</div>
@@ -48,7 +48,7 @@
 			</div>
 		</div>
 		<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
-			<div class="button-box">
+			<div class="button-box1">
 				<div class="number-box">
 					<h3 class="number-text"><span>4</span></h3>
 				</div>
@@ -71,57 +71,12 @@
 	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 		<div class="box-paso1">
 			<div class="row">
-				<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-					<form action="/tu-orla/datos" method="post">
-					<div class="form-group">
-						<label for="nombre" class="titulo-style">Nombre:</label>
-						<input type="text" class="form-control" name="orla[nombre]" id="nombre" required>
-					</div>
-					<div class="form-group">
-						<label for="colegio" class="titulo-style">Centro Educativo:</label>
-						<input type="text" class="form-control" name="orla[colegio]" id="colegio" required>
-					</div>
-                	<div class="form-group">
-					  <label for="inicio_orla" class="titulo-style">Inicio:</label>
-					   <select required name="orla[inicio]">
-					    <?php foreach (Orla::getPosiblesCursosInicio() as $key => $value): ?>
-					      <option value="<?= $key ?>"><?= $value ?></option>
-					    <?php endforeach; ?>                                        
-					   </select>
-					</div>
-					<div class="form-group label-floating is-select">
-                   	  <label class="titulo-style">Soy un:</label>
-                      <select required name="tipo">
-                        <?php foreach (OrlaUsuario::$tipos as $key => $value): ?>
-                          <option value="<?= $key ?>"><?= ucfirst($value) ?></option>
-                        <?php endforeach; ?>                                        
-                      </select>
-                	</div>
-				</div>
-				<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-					<div class="form-group">
-						<label for="curso" class="titulo-style">Curso:</label>
-						<input type="text" class="form-control" name="orla[curso]" id="curso" required>
-					</div>
-					<div class="form-group">
-						<label for="localidad" class="titulo-style">Localidad:</label>
-						<input type="text" class="form-control" name="orla[localidad]" id="localidad" required>
-					</div>
-					
-					<div class="form-group">
-					  <label for="fin_orla" class="titulo-style">Fin:</label>
-					  <select required name="orla[fin]">
-					    <?php foreach (Orla::getPosiblesCursosFin() as $key => $value): ?>
-					      <option value="<?= $key ?>"><?= $value ?></option>
-					    <?php endforeach; ?>                                      
-					  </select>
-					</div>
+				<div class="col-xs-12 col-sm-12 col-md-612 col-lg-12">
 				</div>
 				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 centrar">
 					<center>
-						<button type="submit" class="btn create-button">Crear</button>
+						<button type="submit" class="btn create-button">Finalizar</button>
 					</center>
-					</form>
 				</div>
 			</div>
 		</div>
@@ -195,6 +150,7 @@ body {
 	padding-top: 40px;
 	z-index: 999;
 }
+
 /* Formulario paso 1 */
 .box-paso1 {
 	border: 2px dashed #bbc0d5;

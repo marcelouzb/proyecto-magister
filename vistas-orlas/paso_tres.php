@@ -8,8 +8,6 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<!-- Optional theme -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-	<!-- Latest compiled and minified JavaScript -->
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </head>
 <body>
 	<div class="box-header">
@@ -63,7 +61,10 @@
 		</div>
 		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 			<center>
-				<img class="img-responsive image-group hide-responsive" src="/img/group-bottom.png">
+				<img class="img-responsive image-group" id="foto-a" src="/img/group-bottom.png">
+			</center>
+			<center>
+				<img class="img-responsive image-group" id="foto-b" src="/img/group-bottom2.png">
 			</center>
 		</div>
 	</div>
@@ -235,12 +236,8 @@ body {
 		padding: 15px 0px 10px 0px ;
 		font-size: 11px;
 	}
-	.show-responsive {
-		padding: 30px;
-		width: 300px;
-	}
-	.hide-responsive {
-		display: none;
+	#foto-a {
+		display: none !important;
 	}
 	.box-paso1 {
 		height: 550px;
@@ -272,30 +269,33 @@ body {
 	.paragraph {
 		padding: 10px;
 	}
-	.show-responsive {
-		padding: 30px;
-		width: 360px;
-	}
-	.hide-responsive {
+	#foto-a {
 		display: none;
 	}
 }
-
 /*MD*/
 @media (min-width:821px) and (max-width:992px){
-	.show-responsive {
+	#foto-b {
 		display: none;
 	}
-
 }
-
 /*LG*/
 @media (min-width:993px) and (max-width:1200px){
-	.show-responsive {
+	#foto-b {
 		display: none;
 	}
-
+}
+/*XL*/
+@media (min-width:1201px) and (max-width:2000px){
+	#foto-b {
+		display: none;
+	}
 }
 </style>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
 </body>
 </html>

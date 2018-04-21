@@ -65,10 +65,10 @@
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
             <center>
-                <img class="img-responsive image-group" id="foto-a" src="img/group-bottom.png">
+                <img class="img-responsive image-group" id="foto-a" src="/img/group-bottom.png">
             </center>
             <center>
-                <img class="img-responsive image-group" id="foto-b" src="img/group-bottom2.png">
+                <img class="img-responsive image-group" id="foto-b" src="/img/group-bottom2.png">
             </center>
         </div>
     </div>
@@ -84,7 +84,7 @@
                             <div class="form-group">
                                 <div class="foto-box">
                                     <center>
-                                        <img src="img/user1_bn.jpg" class="photo-user" alt="foto usuario">
+                                        <img src="/img/user1_bn.jpg" class="photo-user" alt="foto usuario">
                                     </center>
                                     <input type="file" id="img_perfil_profesor_1" name="imagen[]" accept="image/*" class="estilo-file">
                                     <center>
@@ -103,7 +103,7 @@
                             <div class="form-group">
                                 <div class="foto-box">
                                     <center>
-                                        <img src="img/user2_bn.jpg" class="photo-user" alt="foto usuario">
+                                        <img src="/img/user2_bn.jpg" class="photo-user" alt="foto usuario">
                                     </center>
                                     <input id="img_perfil_profesor_2" type="file" name="imagen[]" accept="image/*" class="estilo-file" />
                                     <center>
@@ -123,7 +123,7 @@
                             <div class="form-group">
                                 <div class="foto-box">
                                     <center>
-                                        <img src="img/user3_bn.jpg" class="photo-user" alt="foto usuario">
+                                        <img src="/img/user3_bn.jpg" class="photo-user" alt="foto usuario">
                                     </center>
                                     <input type="file" id="img_perfil_profesor_3" name="imagen[]" accept="image/*" class="estilo-file" />
                                     <center>
@@ -152,7 +152,7 @@
                         <div class="form-group">
                             <div class="foto-box">
                                 <center>
-                                    <img src="img/user4_bn.jpg" class="photo-user" alt="foto usuario">
+                                    <img src="/img/user4_bn.jpg" class="photo-user" alt="foto usuario">
                                 </center>
                                 <input type="file" id="img_perfil_alumno_1" name="imagen[]" accept="image/*" class="estilo-file" />
                                 <center>
@@ -171,7 +171,7 @@
                         <div class="form-group">
                             <div class="foto-box">
                                 <center>
-                                    <img src="img/user5_bn.jpg" class="photo-user" alt="foto usuario">
+                                    <img src="/img/user5_bn.jpg" class="photo-user" alt="foto usuario">
                                 </center>
                                 <input type="file" id="img_perfil_alumno_2" name="imagen[]" accept="image/*" class="estilo-file" />
                                 <center>
@@ -190,7 +190,7 @@
                         <div class="form-group">
                             <div class="foto-box">
                                 <center>
-                                    <img src="img/user6_bn.jpg" class="photo-user" alt="foto usuario">
+                                    <img src="/img/user6_bn.jpg" class="photo-user" alt="foto usuario">
                                 </center>
                                 <input type="file" id="img_perfil_alumno_3" name="imagen[]" accept="image/*" class="estilo-file" />
                                 <center>
@@ -439,6 +439,7 @@
                 height: 550px;
             }
         }
+        /* STYLES ADD BY ING. TORRES C */
         
         .file-preview {
             position: absolute;
@@ -497,6 +498,7 @@
             /* background-image: linear-gradient(to bottom, #337ab7 0, #265a88 100%) !important; */
             /* background-image: -webkit-gradient(linear, left top, left bottom, from(#337ab7), to(#265a88)) !important; */
         }
+        /* END - STYLES ADD BY ING. TORRES C */
         /*SM*/
         
         @media (min-width:370px) and (max-width:820px) {
